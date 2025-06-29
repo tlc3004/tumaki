@@ -1,0 +1,102 @@
+
+
+[
+       {
+      "id": 1,
+      "nombre": "Classic Furay",
+      "precio": "25.99",
+      "descripcion": "Roll de salmón fresco, aguacate, Queso Crema, recubierto con Pánko y Frito",
+      "imagen": "../images/furaymaki.png"
+    },
+    {
+      "id": 2,
+      "nombre": "California Premium",
+      "precio": "24.99",
+      "descripcion": "Maki clásico con ebifuray, aguacate, queso crema cubierto con Semillas de sésamo Blanco y Tostado",
+      "imagen": "../images/makicalifornia.png"
+    },
+    {
+        "id": 3,
+        "nombre": "Gunkan Deluxe",
+        "precio": "22.99",
+        "descripcion": "Selección de gunkan con atún picante, salmón y ebi(langostino)",
+        "imagen": "../images/gunkans.png"
+    },
+    {
+        "id": 4,
+        "nombre": "Traditional Hoso Maki ",
+        "precio": "30.99",
+        "descripcion": "Maki tradicional envuelto en alga Nori con pepino fresco y salmón de primera calidad",
+        "imagen": "../images/hosomaki.png"
+    },
+    {
+        "id": 5,
+        "nombre": "Nigiri Selection",
+        "precio": "42.99",
+        "descripcion": "Selección premium de nigiris de salmón fresco ",
+        "imagen": "../images/nigiris.png"
+    },
+    {
+        "id": 6,
+        "nombre": "Especial TUMAKI",
+        "precio": "47.99",
+        "descripcion": "Nuestra creación signature con salmón, huevas rojas y salsa secreta",
+        "imagen": "../images/especialmaki.png"
+    },
+    {
+        "id": 7,
+        "nombre": "Deluxe Gunkans Experience",
+        "precio": "64.99",
+        "descripcion": "Gunkans con estilo y presentación elegante con huevas rojas seleccionadas, ebi y cangrejo",
+        "imagen": "../images/deluxemaki.png"
+    },
+    {
+        "id": 8,
+        "nombre": "Salmon Lover",
+        "precio": "49.99",
+        "descripcion": "Para los amantes del salmón: roll generoso con salmón fresco y aguacate",
+        "imagen": "../images/makisalmon.png"
+    },
+    {
+        "id": 9,
+        "nombre": "Sashimi Atun",
+        "precio": "56.99",
+        "descripcion": "A los culinarios del buen sabor, Sashimi de Atún fresco ",
+        "imagen": "../images/sashimiatun.png"
+    },
+    {
+        "id": 10,
+        "nombre": "Yakuza Maki",
+        "precio": "28.99",
+        "descripcion": "Maki muy Japonés con Atún fresco, queso crema, cubierto con laminas de aguacate y bañado en salsa Tare",
+        "imagen": "../images/yakuzamaki1.png"
+    },
+    {
+        "id": 11,
+        "nombre": "Salmon Legendary",
+        "precio": "46.99",
+        "descripcion": "Para los amantes del salmón fresco y aguacate. Una delicia con clase y estilo unico en su sabor",
+        "imagen": "../images/yakuzamaki.png"
+    },
+    {
+        "id": 12,
+        "nombre": "Selection Furay ",
+        "precio": "33.99",
+        "descripcion": "Nuestra version al estilo y sabor Japones. Un sueño en cada bocado",
+        "imagen": "../images/furaymaki1.png"
+    },
+    {
+        "id": 13,
+        "nombre": "Sashimi Salmón",
+        "precio": "59.99",
+        "descripcion": "Cortez de Salmón fresco en su presentacion estilo nikkei",
+        "imagen": "../images/sashimisalmon.png"
+    },
+    {
+        "id": 14,
+        "nombre": "Nigiris Mixlover",
+        "precio": "49.99",
+        "descripcion": "Nigiris de Salmón y Atún en una mezcla Imperial y tracidicional ",
+        "imagen": "../images/nigiris1.png"
+    }
+    ]

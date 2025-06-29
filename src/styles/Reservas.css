@@ -1,0 +1,308 @@
+
+.reservas-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.reservas-container h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e9ecef;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: var(--transition);
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(219, 17, 17, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+form button {
+  width: 100%;
+  padding: 1.2rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+form button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+form button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Reserva image section */
+.reserva-image-container {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* .reserva-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+} */
+
+.reserva-image-description {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.reserva-confirmation-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.reserva-confirmation-content {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: aparecer 0.4s ease-out forwards;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+  transition: var(--transition);
+}
+
+.modal-close-button:hover {
+  color: #333;
+}
+
+.confirmation-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.reserva-success-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #4caf50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: white;
+  font-size: 2rem;
+}
+
+.confirmation-title {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.confirmation-subtitle {
+  color: #666;
+  margin: 0;
+}
+
+.reserva-details {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.reservation-code {
+  margin-bottom: 1rem;
+}
+
+.reservation-code strong {
+  display: block;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.reservation-code-value {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.reserva-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.reserva-detail-item strong {
+  display: block;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.confirmation-email-text {
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.confirmation-email-text strong {
+  color: #333;
+}
+
+.accept-button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+.accept-button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* 
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns:1fr;
+  }
+
+  .reserva-confirmation-content {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .reserva-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .reserva-image-container {
+    padding: 0.5rem;
+  }
+
+  .reserva-image {
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+  }
+} */
+@media (max-width: 768px) {
+  .reservas-container {
+    padding: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  form button {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .reservas-container h3 {
+    font-size: 1.2rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .reserva-confirmation-content {
+    padding: 1rem;
+  }
+
+  .confirmation-title {
+    font-size: 1rem;
+  }
+
+  .confirmation-subtitle,
+  .confirmation-email-text {
+    font-size: 0.85rem;
+  }
+}

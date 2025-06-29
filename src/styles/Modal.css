@@ -1,0 +1,114 @@
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background-overlay);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  padding: 1rem;
+  padding-bottom: 80px;
+  overflow: hidden;
+}
+
+.modal {
+   background: linear-gradient(135deg, var(--white), var(--gray-light));
+  padding: 2.5rem;
+  border-radius: 5px;
+  
+  width: 80%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  transform: scale(0.9);
+  opacity: 0;
+  animation: aparecer 0.4s ease-out forwards;
+  box-shadow: var(--shadow-heavy);
+  border: 2px solid var(--primary-color);
+}
+.modal-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 1rem;
+  top:0;
+}
+
+.modal-image p{
+  color:#fff
+}
+
+.modal h3 {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.modal .close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ff4757, #ff3742);
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: var(--transition);
+  box-shadow: var(--shadow-light);
+}
+
+.modal .close-btn:hover {
+  transform: rotate(90deg) scale(1.1);
+  box-shadow: var(--shadow-medium);
+}
+
+.scroll-top-button {
+  position: absolute;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  z-index: 1001;
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-top-button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+  box-shadow: var(--shadow-medium);
+}
+
+@media (max-width: 768px) {
+  .modal {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+}
+

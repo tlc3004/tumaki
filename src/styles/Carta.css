@@ -1,0 +1,44 @@
+
+.carta-container {
+  text-align: center;
+}
+
+.carta-container h3 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.carta-container p {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.carta-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-medium);
+  margin-top: 1rem;
+  transition: var(--transition);
+}
+
+.carta-container img:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-heavy);
+}
+
+
+@media (max-width: 768px) {
+  .carta-container h3 {
+    font-size: 1.6rem;
+  }
+
+  .carta-container p {
+    font-size: 1rem;
+  }
+}

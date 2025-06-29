@@ -1,0 +1,103 @@
+.boleta-reserva {
+  font-family: 'Arial', sans-serif;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.reserva-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #e0e0e0;
+}
+
+.reserva-logo {
+  font-size: 2.5rem;
+  margin-right: 15px;
+}
+
+.reserva-details {
+  margin: 20px 0;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.detail-row span:first-child {
+  font-weight: bold;
+  color: #555;
+}
+
+.detail-row span:last-child {
+  text-align: right;
+}
+
+.reserva-footer {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px dashed #e0e0e0;
+  text-align: center;
+  font-style: italic;
+  color: #666;
+}
+
+.reserva-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.reserva-info-row {
+  display: contents;
+}
+
+.reserva-info-row span:first-child {
+  font-weight: 600;
+  color: #555;
+  padding: 0.5rem 0;
+}
+
+.reserva-info-row span:last-child {
+  padding: 0.5rem;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.reserva-status {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.boleta-btn-cancel {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  color: white;
+}
+
+.boleta-btn-cancel:hover {
+  background: linear-gradient(135deg, #c82333, #bd2130);
+}
+
+@media (max-width: 480px) {
+  .reserva-info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .reserva-info-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #f5f5f5;
+  }
+}

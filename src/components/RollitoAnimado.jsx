@@ -30,7 +30,7 @@ function RollitoAnimado({ activo }) {
   return (
     <div className={`rollito_animado ${fase}`} ref={rollitoRef}>
       <img src={rollitoImg} alt="rollito_animado" style={{ width: "60px" }} />
-      {fase === "saluda" && <span className="saludo">👋</span>}
+      {fase === "saluda" && <span className="saludo" >👋</span>}
     </div>
   );
 }

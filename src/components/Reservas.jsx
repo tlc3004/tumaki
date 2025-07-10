@@ -114,11 +114,8 @@ function Reservas({onReservaConfirmada}) {
           src={imagenActual}
           alt=""
           style={{
-            width: "140%",
-            minWidth:"150px",
-            maxWidth: "600px",
+            width: "95%",        
             height: "400px",
-            marginLeft:"-30px",
             objectFit: "cover",
             borderRadius: "8px",
           }}

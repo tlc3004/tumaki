@@ -26,12 +26,13 @@
   opacity: 1;
 }
 
+
 .saludo {
   position: absolute;
-  top: 5px;
-  right: 45px;
-  font-size: 1.2rem;
-  animation: saludar 0.5s infinite alternate;
+  top: 10px;
+  right: 46px;
+  font-size: .9rem;
+  animation: saludar 0.3s infinite alternate;
   transform-origin: bottom center;
 }
 

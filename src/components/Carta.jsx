@@ -19,7 +19,7 @@ function Carta() {
         const pedidosFormateados = data.map((item) => ({
           ...item,
           imagen: `/images/${item.imagen}`,
-          precio: parseFloat(item.precio),
+          descripcion: `${item.descripcion}`
         }));
 
         setPedidos(pedidosFormateados);
@@ -47,11 +47,13 @@ function Carta() {
             <img
               src={roll.imagen}
               alt={roll.nombre}
+              descripcion={roll.descripcion}
               className="img-roll"
               // onClick={() => setImage(roll.imagen, roll.descripcion)}
             />
             <p>{roll.nombre}</p>
-            <p>S/ {roll.precio.toFixed(2)}</p>
+            <p>{roll.descripcion}</p>
+            
           </div>
         ))}
       </div>

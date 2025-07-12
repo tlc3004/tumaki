@@ -11,14 +11,16 @@
   letter-spacing: 1px;
 }
 
+
 .carta-container p {
-  color: #666;
+  color: #444;
   font-size: 1.1rem;
   margin-bottom: 2rem;
   line-height: 1.6;
 }
 
 .carta-container img {
+  width: 40%;
   max-width: 100%;
   height: auto;
   border-radius: var(--border-radius);
@@ -28,8 +30,9 @@
 }
 
 .carta-container img:hover {
-  transform: scale(1.02);
+  transform: scale(1.6);
   box-shadow: var(--shadow-heavy);
+  
 }
 
 

@@ -162,7 +162,6 @@ function Pedidos({ onBoletaPedido }) {
             <div className="card-content">
               <h4>{item.nombre}</h4>
               <p className="precio">S/ {item.precio.toFixed(2)}</p>
-              <p className="descripcion">{item.descripcion}</p>
               <button
                 className="add-to-cart-button"
                 onClick={() => agregarPedido(item)}

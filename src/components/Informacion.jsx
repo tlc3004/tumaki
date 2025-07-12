@@ -10,8 +10,8 @@ function Informacion() {
       <section className="historia">
         <h4>🍣 Nuestra Historia</h4>
         <p>
-          Fundado en 2020, TUMAKI nace de la pasión por la fusión de la cocina japonesa tradicional con toques
-          contemporáneos nikkei. Nuestro chef ejecutivo, con más de 15 años de experiencia en restaurantes de Tokio y
+          Fundado en 2017 por Antonio Leon, TUMAKI nace de la pasión por la fusión de la cocina japonesa tradicional con toques
+          contemporáneos nikkei.Chef ejecutivo, con más de 15 años de experiencia en restaurantes de
           Lima, ha creado un menú único que respeta la tradición mientras abraza la innovación culinaria.
         </p>
       </section>
@@ -85,4 +85,4 @@ function Informacion() {
   )
 }
 
-export default Informacion
+export default Informacion;

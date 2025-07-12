@@ -30,7 +30,7 @@
 }
 
 .carta-container img:hover {
-  transform: scale(1.6);
+  transform: scale(1.9);
   box-shadow: var(--shadow-heavy);
   
 }

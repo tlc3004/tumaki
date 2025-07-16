@@ -2,6 +2,11 @@
 import { useState, useEffect } from "react"
 import "../styles/Toast.css" 
 
+const reproducirSonido = () => {
+  const audio = new Audio("/sounds/fluttering-bamboo-flute-transition-b-1-209650.mp3");
+  audio.play().catch((e) => console.warn("Error al reproducir sonido:", e));
+};
+
 
 function Toast({ mensaje, onClick, onClose }) {
   // Aqui el estado para controlar la visibilidad del toast (para animaciones de entrada/salida)
@@ -12,6 +17,7 @@ function Toast({ mensaje, onClick, onClose }) {
 
   // Aqui el efecto que maneja el cierre automático del toast después de 5 segundos
   useEffect(() => {
+    reproducirSonido();
     // Timer principal: cierra el toast automáticamente en 5s
     const timer = setTimeout(() => {
       handleClose()
@@ -41,6 +47,7 @@ function Toast({ mensaje, onClick, onClose }) {
     }, 300) // Dejamos 300ms para la animación de salida
   }
 
+  
   return (
     <div className={`toast ${isVisible ? "toast-visible" : "toast-hidden"}`} onClick={onClick}>
       {/* Aqui el header del toast con icono, titulo y boton de cerrar */}

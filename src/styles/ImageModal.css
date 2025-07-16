@@ -23,11 +23,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: zoomIn 0.3s ease;
+  animation: zoomIn .2s ease;
 }
 
 
-/* .image-modal-content[data-x][data-y] {
+.image-modal-content[data-x][data-y] {
   display: grid;
   position: relative;
   transform: translate(var(--x), var(--y));
@@ -35,7 +35,7 @@
   height: 80vh;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,9);
-} */
+} 
 
 .descripcion {
   margin-top: 20px;

@@ -28,7 +28,7 @@ export function useImageModal() {
           <img src={imageSrc.src} alt="Roll" />
           <p className="descripcion">{imageSrc.descripcion}</p>
           <button className="close-img-btn" onClick={closeImage}>
-            ×
+            
           </button>
         </div>
       </div>

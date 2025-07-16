@@ -20,7 +20,7 @@ import salon6 from "../image/salon_6.png";
 import slider6 from "../image/slider_6.png";
 
 
-import { useImageSlider } from "../Hooks/useImageSlider";
+import { useSlider } from "../Hooks/useSlider";
 
 function Reservas({onReservaConfirmada}) {
  
@@ -97,7 +97,7 @@ function Reservas({onReservaConfirmada}) {
      slider6,
     ];
 
-   const imagenActual = useImageSlider(imagenes, 10000);
+   const {imagenActual, animacion} = useSlider(imagenes, 10000);
 
 
    
@@ -113,11 +113,13 @@ function Reservas({onReservaConfirmada}) {
        <img
           src={imagenActual}
           alt=""
+          className={animacion}
           style={{
             width: "95%",        
             height: "400px",
             objectFit: "cover",
             borderRadius: "8px",
+            transition: "1.1s infinite ease"
           }}
         />
         {/* Un parrafito para rellenar más, con sus estilos correspondientes */}

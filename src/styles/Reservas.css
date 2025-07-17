@@ -131,11 +131,11 @@ form button:disabled {
   width: 90%;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   position: relative;
-  animation: aparecer .1s infinite ease forwards;
+  animation: aparecer 0.4s  ease-out;
 }
 
 .animando-slider {
-  animation: despixeladoFadeIn 3s infinite ease;
+  animation: despixeladoFadeIn 2s  ease-out;
 }
 
 .modal-close-button {

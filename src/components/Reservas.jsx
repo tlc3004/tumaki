@@ -130,7 +130,7 @@ function Reservas({onReservaConfirmada}) {
             height: "400px",
             objectFit: "cover",
             borderRadius: "8px",
-            transition: "1.1s infinite ease"
+            transition: "opacity 0.5s ease-in-out"
           }}
         />
         {/* Un parrafito para rellenar más, con sus estilos correspondientes */}

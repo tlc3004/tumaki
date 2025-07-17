@@ -20,9 +20,10 @@
 }
 
 .carta-container img {
-  width: 40%;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  max-width: 60%;
+  height: 0 auto;
+  overflow: hidden;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-medium);
   margin-top: 1rem;
@@ -34,6 +35,11 @@
   
 }
 
+
+.btn-carta{
+  width: 100px;
+  margin: 20px;
+}
 
 @media (max-width: 768px) {
   .carta-container h3 {

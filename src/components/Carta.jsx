@@ -52,8 +52,8 @@ function Carta() {
             <p>{rollActual.descripcion}</p>
           </div>
           <div className="slider-botones">
-            <button onClick={anterior}>⬅️</button>
-            <button onClick={siguiente}>➡️</button>
+            <button className="btn-carta" onClick={anterior}>⬅️</button>
+            <button className="btn-carta" onClick={siguiente}>➡️</button>
           </div>
         </div>
       )}

@@ -61,7 +61,7 @@ function Reservas({onReservaConfirmada}) {
     // Generamos un código de reserva aleatorio simple, esto podriamos mejorarlo, para q sea ordenado, no aleatorio
     const reserva = {
       ...formData,
-      id: "RES-" + Math.floor(Math.random() * 10000),
+      id: "RES-" + Math.floor(Math.random() * 9000),
     };
 
     console.log("Datos de reserva:", reserva);

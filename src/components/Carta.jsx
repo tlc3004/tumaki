@@ -2,12 +2,19 @@ import { useEffect, useState } from "react";
 import { useImageSlider } from "../Hooks/useImageSlider";
 import "../styles/Carta.css";
 
+const reproducirSonido = () => {
+  const audio = new Audio("sounds/chimes-sound-effects-hq-325255.mp3");
+  audio.play().catch((e) => console.warn("Error al reproducir sonido:", e));
+};
+
+
 function Carta() {
   const [pedidos, setPedidos] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
   useEffect(() => {
+    reproducirSonido();
     const cargarPedidos = async () => {
       try {
         setLoading(true);

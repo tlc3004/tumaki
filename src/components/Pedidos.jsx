@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
 import "../styles/Pedidos.css";
 
+
+const reproducirSonido = () => {
+  const audio = new Audio("sounds/chimes-sound-effects-hq-325255.mp3");
+  audio.play().catch((e) => console.warn("Error al reproducir sonido:", e));
+};
+
+
 function Pedidos({ onBoletaPedido }) {
   // Estados
   const [imageErrors, setImageErrors] = useState({});
@@ -13,6 +20,7 @@ function Pedidos({ onBoletaPedido }) {
 
   // Carga de productos
   useEffect(() => {
+    reproducirSonido();
     const cargarProductos = async () => {
       try {
         setLoading(true);

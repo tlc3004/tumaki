@@ -2,7 +2,7 @@
 //Aqui es donde hice mas cambios, queria crear un formulario mas completo y q se me sale de las manos
 //Tratare de comentar lo mas rapido posible
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../styles/Reservas.css"; 
 import salon from "../image/salon.png";
 import slider from "../image/slider.png";
@@ -20,10 +20,21 @@ import salon6 from "../image/salon_6.png";
 import slider6 from "../image/slider_6.png";
 
 
+
+const reproducirSonido = () => {
+  const audio = new Audio("sounds/chimes-sound-effects-hq-325255.mp3");
+  audio.play().catch((e) => console.warn("Error al reproducir sonido:", e));
+};
+
+
 import { useSlider } from "../Hooks/useSlider";
 
 function Reservas({onReservaConfirmada}) {
- 
+
+  useEffect(() => {
+    reproducirSonido();
+  },[]);
+
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",

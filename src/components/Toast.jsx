@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import "../styles/Toast.css" 
 
 const reproducirSonido = () => {
-  const audio = new Audio("/sounds/fluttering-bamboo-flute-transition-b-1-209650.mp3");
+  const audio = new Audio("/sounds/notification-3-125767.mp3");
   audio.play().catch((e) => console.warn("Error al reproducir sonido:", e));
 };
 

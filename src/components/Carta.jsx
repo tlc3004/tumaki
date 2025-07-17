@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
-// import { useImageModal } from "../Hooks/useImageModal";
+import { useImageSlider } from "../Hooks/useImageSlider";
 import "../styles/Carta.css";
 
 function Carta() {
   const [pedidos, setPedidos] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  // const { setImage, ImageModal } = useImageModal();
 
   useEffect(() => {
     const cargarPedidos = async () => {
@@ -19,7 +18,8 @@ function Carta() {
         const pedidosFormateados = data.map((item) => ({
           ...item,
           imagen: `/images/${item.imagen}`,
-          descripcion: `${item.descripcion}`
+          descripcion: item.descripcion,
+          nombre: item.nombre,
         }));
 
         setPedidos(pedidosFormateados);
@@ -34,6 +34,8 @@ function Carta() {
     cargarPedidos();
   }, []);
 
+  const { rollActual, siguiente, anterior } = useImageSlider(pedidos);
+
   return (
     <div className="carta-container">
       <h3>Nuestros Rolls Destacados 🍣</h3>
@@ -41,24 +43,20 @@ function Carta() {
       {loading && <p>Cargando rolls...</p>}
       {error && <p style={{ color: "red" }}>{error}</p>}
 
-      <div className="carta-grid">
-        {pedidos.map((roll) => (
-          <div key={roll.id} className="roll-card">
-            <img
-              src={roll.imagen}
-              alt={roll.nombre}
-              descripcion={roll.descripcion}
-              className="img-roll"
-              // onClick={() => setImage(roll.imagen, roll.descripcion)}
-            />
-            <p>{roll.nombre}</p>
-            <p>{roll.descripcion}</p>
-            
+      {/* Mostrar solo el slider con 1 roll a la vez */}
+      {rollActual && (
+        <div className="slider-contenedor">
+          <img src={rollActual.imagen} alt={rollActual.nombre} className="slider-img" />
+          <div className="slider-info">
+            <h4>{rollActual.nombre}</h4>
+            <p>{rollActual.descripcion}</p>
           </div>
-        ))}
-      </div>
-
-      {/* <ImageModal /> */}
+          <div className="slider-botones">
+            <button onClick={anterior}>⬅️</button>
+            <button onClick={siguiente}>➡️</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

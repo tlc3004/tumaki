@@ -21,6 +21,7 @@ function Toast({ mensaje, onClick, onClose }) {
     // Timer principal: cierra el toast automáticamente en 5s
     const timer = setTimeout(() => {
       handleClose()
+      
     }, 5000)
 
  
@@ -40,6 +41,7 @@ function Toast({ mensaje, onClick, onClose }) {
 
   // Aqui la función que cierra el toast manualmente (cuando el usuario da clic en cerrar)
   const handleClose = (e) => {
+    reproducirSonido();
     if (e) e.stopPropagation() // Para que el clic no propague a otros elementos
     setIsVisible(false) // Ocultamos el toast 
     setTimeout(() => {

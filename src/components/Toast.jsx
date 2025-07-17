@@ -41,10 +41,11 @@ function Toast({ mensaje, onClick, onClose }) {
 
   // Aqui la función que cierra el toast manualmente (cuando el usuario da clic en cerrar)
   const handleClose = (e) => {
-    reproducirSonido();
+    
     if (e) e.stopPropagation() // Para que el clic no propague a otros elementos
     setIsVisible(false) // Ocultamos el toast 
     setTimeout(() => {
+      reproducirSonido();
       onClose() // Ejecutamos la función que nos pasaron al cerrarse definitivamente
     }, 300) // Dejamos 300ms para la animación de salida
   }

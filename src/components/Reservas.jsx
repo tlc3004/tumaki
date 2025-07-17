@@ -97,7 +97,7 @@ function Reservas({onReservaConfirmada}) {
      slider6,
     ];
 
-   const {imagenActual, animacion} = useSlider(imagenes, 10000);
+   const {imagenActual, animacion} = useSlider(imagenes, 5000);
 
 
    

@@ -14,11 +14,14 @@ export function useToastGlobal() {
   const [onClickGlobal, setOnClickGlobal] = useState(()=> {})
 
   const setToastGlobal = useCallback((msg, onClick = () => {}) =>{
-  setMensajeGlobal(msg);
-  setOnClickGlobal(() => onClick);
-}, []);
-
-const cerrarToastGlobal = () => setMensajeGlobal(null);
+    setMensajeGlobal(msg);
+    setOnClickGlobal(() => onClick);
+  }, []);
+  
+  const cerrarToastGlobal = () => {
+    reproducirSonido();
+    setMensajeGlobal(null);
+  }
 
 const ToastGlobal = () =>
   mensajeGlobal ? (
@@ -27,7 +30,6 @@ const ToastGlobal = () =>
     onClick={() =>{
       onClickGlobal();
       cerrarToastGlobal();
-      reproducirSonido();
         }}
         onClose={cerrarToastGlobal}
       />

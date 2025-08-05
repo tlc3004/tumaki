@@ -9,9 +9,8 @@ import Boleta from "./components/Boleta";
 import BoletaReserva from "./components/BoletaReserva";
 import Toast from "./components/Toast";
 import RollitoAnimado from "./components/RollitoAnimado";
-import { useToastGlobal } from "./Hooks/useToastGlobal"; 
-import LegalModal from "./Hooks/useLegalData";
-
+import { useToastGlobal } from "./Hooks/useToastGlobal";
+import useLegalData from "./Hooks/useLegalData";
 
 export default function Home() {
   const [modalInfo, setModalInfo] = useState(null);
@@ -20,9 +19,10 @@ export default function Home() {
   const [mostrarToast, setMostrarToast] = useState(false);
   const [toastMensaje, setToastMensaje] = useState("");
   const [toastAction, setToastAction] = useState(null);
+  const [mostrarLegal, setMostrarLegal] = useState(false);
 
-  // ✅ Aquí es la única vez que se llama
   const { ToastGlobal, setToastGlobal } = useToastGlobal();
+  const contenidoLegal = useLegalData("terminos");
 
   const openModal = (section) => {
     const title = section;
@@ -39,13 +39,18 @@ export default function Home() {
         content = <Reservas onReservaConfirmada={handleReservaConfirmada} />;
         break;
       case "Boleta":
-        content = <Boleta pedido={pedidoBoleta} onToastGlobal={(msg) =>setToastGlobal(msg, closeModal)} />;
+        content = (
+          <Boleta
+            pedido={pedidoBoleta}
+            onToastGlobal={(msg) => setToastGlobal(msg, closeModal)}
+          />
+        );
         break;
       case "Boleta Reserva":
         content = (
           <BoletaReserva
             reserva={reservaBoleta}
-            onToastGlobal={ (msg)=>setToastGlobal(msg, closeModal)} 
+            onToastGlobal={(msg) => setToastGlobal(msg, closeModal)}
           />
         );
         break;
@@ -98,10 +103,6 @@ export default function Home() {
         />
       )}
 
-            {/* Modal Legal (solo una vez) */}
-      <LegalModal clave="terminos" />
-
-      {/* Toast LOCAL con Rollito */}
       {mostrarToast && (
         <>
           <Toast
@@ -113,8 +114,31 @@ export default function Home() {
         </>
       )}
 
-      {/* Solo para cosas como la descarga */}
       <ToastGlobal onClose={closeModal} />
+
+    {/* Footer fijo con botón legal */}
+<div className="fixed bottom-0 w-full  text-center py-2  shadow-sm">
+  <button
+    onClick={() => setMostrarLegal(true)}
+    className="text-sm text-blue-600 underline hover:text-blue-800 transition"
+  >
+    Términos y Condiciones
+  </button>
+</div>
+
+
+      {/* ⬇️ Modal legal */}
+      {mostrarLegal && (
+        <Modal
+          title="Términos y Condiciones"
+          content={
+            <div className="max-h-[400px] overflow-y-auto whitespace-pre-wrap px-2 text-left text-gray-800">
+              {contenidoLegal || "Cargando..."}
+            </div>
+          }
+          onClose={() => setMostrarLegal(false)}
+        />
+      )}
     </>
   );
 }

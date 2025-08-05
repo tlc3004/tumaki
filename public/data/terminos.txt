@@ -1,0 +1,33 @@
+TÉRMINOS Y CONDICIONES DE USO  
+Versión 1.0 – Última actualización: [05 de agosto de 2025]
+
+Por favor, lea atentamente estos Términos y Condiciones antes de utilizar esta aplicación. El acceso y uso de la misma implica la aceptación total de los presentes términos.
+
+1. ACEPTACIÓN DE LOS TÉRMINOS  
+Al acceder, navegar o utilizar esta aplicación, el usuario reconoce haber leído, comprendido y aceptado estos Términos y Condiciones, así como la Política de Privacidad.
+
+2. USO PERMITIDO  
+Esta aplicación ha sido desarrollada con fines informativos, educativos y/o recreativos. El usuario se compromete a hacer un uso responsable, no emplearla con fines ilegales o no autorizados, y respetar la integridad del sistema.
+
+3. PROPIEDAD INTELECTUAL  
+Todos los contenidos presentes en esta aplicación (textos, gráficos, logotipos, interfaces, código, entre otros) son propiedad del desarrollador o se utilizan bajo licencias correspondientes. Está prohibida su reproducción, distribución o modificación sin autorización previa.
+
+4. RESPONSABILIDAD  
+El desarrollador no garantiza la disponibilidad continua de la aplicación ni se responsabiliza por posibles daños directos o indirectos derivados del uso de la misma, incluyendo pérdida de datos, errores de funcionamiento o incompatibilidad con dispositivos.
+
+5. PROTECCIÓN DE DATOS  
+Esta aplicación puede almacenar datos localmente (por ejemplo, en el almacenamiento del navegador o del dispositivo). No se recopilan datos personales sin consentimiento explícito. El usuario puede eliminar dicha información en cualquier momento desde la configuración de su dispositivo.
+
+6. MODIFICACIONES  
+El desarrollador se reserva el derecho de actualizar estos Términos en cualquier momento. Las modificaciones serán publicadas en esta misma sección y entrarán en vigencia inmediatamente después de su publicación.
+
+7. LEY APLICABLE Y JURISDICCIÓN  
+Estos Términos se rigen por la legislación vigente en la República del Perú. En caso de conflicto, ambas partes acuerdan someterse a la jurisdicción de los tribunales competentes del distrito judicial correspondiente.
+
+8. CONTACTO  
+Para consultas relacionadas con estos Términos y Condiciones, puede comunicarse con el desarrollador al correo electrónico: antonio.leon@ejemplo.com
+
+Gracias por utilizar esta aplicación de forma responsable.
+
+Atentamente,  
+El equipo de desarrollo.

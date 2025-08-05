@@ -10,6 +10,8 @@ import BoletaReserva from "./components/BoletaReserva";
 import Toast from "./components/Toast";
 import RollitoAnimado from "./components/RollitoAnimado";
 import { useToastGlobal } from "./Hooks/useToastGlobal"; 
+import LegalModal from "./Hooks/useLegalData";
+
 
 export default function Home() {
   const [modalInfo, setModalInfo] = useState(null);
@@ -95,6 +97,9 @@ export default function Home() {
           onClose={closeModal}
         />
       )}
+
+            {/* Modal Legal (solo una vez) */}
+      <LegalModal clave="terminos" />
 
       {/* Toast LOCAL con Rollito */}
       {mostrarToast && (

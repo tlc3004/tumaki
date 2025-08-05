@@ -132,7 +132,7 @@ export default function Home() {
         <Modal
           title="Términos y Condiciones"
           content={
-            <div className="max-h-[400px] overflow-y-auto whitespace-pre-wrap px-2 text-left text-gray-800">
+            <div className="max-h-[400px] whitespace-pre-wrap px-2 text-left text-gray-800">
               {contenidoLegal || "Cargando..."}
             </div>
           }

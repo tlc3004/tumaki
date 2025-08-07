@@ -133,10 +133,11 @@ header::before {
 
   .nav-buttons {
     display: row;
+    right: 10%;
   }
 
   .nav-buttons button {
-    min-width: 50%;
+    min-width: 40%;
     padding: 0.6rem 1rem;
     font-size: 0.8rem;
   }
@@ -145,11 +146,11 @@ header::before {
 @media (max-width: 480px) {
   .nav-buttons {
     flex-direction: column;
-    width: 80%;
+    width: 90%;
   }
 
   .nav-buttons button {
-    width: 80%;
+    width: 60%;
   }
 }
 

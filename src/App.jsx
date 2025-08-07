@@ -11,6 +11,7 @@ import Toast from "./components/Toast";
 import RollitoAnimado from "./components/RollitoAnimado";
 import { useToastGlobal } from "./Hooks/useToastGlobal";
 import useLegalData from "./Hooks/useLegalData";
+import { useAppData } from "./Hooks/useAppData";
 
 export default function Home() {
   const [modalInfo, setModalInfo] = useState(null);
@@ -23,6 +24,7 @@ export default function Home() {
 
   const { ToastGlobal, setToastGlobal } = useToastGlobal();
   const contenidoLegal = useLegalData("terminos");
+  const apps = useAppData();
 
   const openModal = (section) => {
     const title = section;
@@ -115,6 +117,21 @@ export default function Home() {
       )}
 
       <ToastGlobal onClose={closeModal} />
+
+      
+      <div className="fixed top-1/2 -translate-y-1/2 left-2 flex flex-col gap-4 z-50">
+        {apps.map((app, i) => (
+          <a key={i} href={app.url} >
+            <img
+              src={app.logo}
+              alt={app.nombre}
+              className="logos w-10 h-10 hover:scale-110 transition-transform"
+              title={app.nombre}
+            />
+          </a>
+        ))}
+      </div>
+
 
     {/* Footer fijo con botón legal */}
 <div className="fixed bottom-0 w-full  text-center py-2  shadow-sm">
